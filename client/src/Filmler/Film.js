@@ -11,6 +11,7 @@ export default function Film(props) {
     axios
       .get(`http://localhost:5001/api/filmler/${id}`) // Bu uç noktayı Postman'le çalışın
       .then(response => {
+        setMovie(response.data);
           // Bu kısmı log statementlarıyla çalışın
           // ve burdan gelen response'u 'movie' e aktarın
       })
